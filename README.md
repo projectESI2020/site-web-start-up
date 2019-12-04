@@ -1,2 +1,2 @@
 # site-web-start-up
-Site web de la start-up de développement logiciel
+Site web de notre start-up de développement logiciel.
