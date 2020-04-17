@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact Form{% endblock %}
+
+{% block body %}
+<div class="container-fluid mt-5">
+    <div class="row justify-content-center mt-5">
+        <div class="col-12 mt-5">
+            <h2>Formulaire de contact :</h2>
+            <br />
+            <div>
+                {{ form_start(email_form) }}
+
+                <form class="needs-validation" novalidate>
+                    <div class="form-row">
+                        <div class="col-6 mb-3">
+                            <label for="validationTooltip01">Nom :</label>
+                            {{ form_row(email_form.lastname, { 'attr': {'class': 'form-control'}, 'label': ' ', 'id': 'validationTooltip01'} ) }}
+                            <div class="valid-tooltip">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <label for="validationTooltip02">Prénom :</label>
+                            {{ form_row(email_form.firstname, { 'attr': {'class': 'form-control'}, 'label': ' ', 'id': 'validationTooltip02'} ) }}
+                            <div class="valid-tooltip">
+                                Looks good!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-6 mb-3">
+                            <label for="validationTooltip01">Email :</label>
+                            {{ form_row(email_form.email, { 'attr': {'class': 'form-control'}, 'label': ' ', 'id': 'validationTooltip01'} ) }}
+                            <div class="valid-tooltip">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <label for="validationTooltip02">Téléphone :</label>
+                            {{ form_row(email_form.phone, { 'attr': {'class': 'form-control'}, 'label': ' ', 'id': 'validationTooltip02'} ) }}
+                            <div class="valid-tooltip">
+                                Looks good!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-3 mb-3">
+                            <label for="validationTooltip01">Objet :</label>
+                            {{ form_row(email_form.object, { 'attr': {'class': 'form-control form-control-lg'}, 'label': ' ', 'id': 'validationTooltip01'} ) }}
+                            <div class="valid-tooltip">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-9 mb-3">
+                            <label for="validationTooltip02">Message :</label>
+                            {{ form_row(email_form.message, { 'attr': {'class': 'form-control form-control-lg'}, 'label': ' ', 'id': 'staticMessage', 'rows': '63'} ) }}
+                            <div class="valid-tooltip">
+                                Looks good!
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+            <button class="btn btn-primary" type="submit">Submit form</button>
+            </form>
+
+            {{ form_end(email_form) }}
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
